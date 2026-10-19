@@ -1,0 +1,62 @@
+COLLISION STRATEGY TESTS
+
+===== Separate Chaining =====
+Collision: carol shares bucket 2.
+Rehash event: capacity changed from 7 to 17.
+Collision: erin shares bucket 11.
+Users stored: 5
+Load factor: 0.29
+Find carol: Found
+Remove bob: Removed
+Find bob after removal: Not found
+
+===== Linear Probing =====
+Collision: carol found occupied index 2 and continued probing.
+Rehash event: capacity changed from 7 to 17.
+Collision: erin found occupied index 11 and continued probing.
+Users stored: 5
+Load factor: 0.29
+Find carol: Found
+Remove bob: Removed
+Find bob after removal: Not found
+
+===== Quadratic Probing =====
+Collision: carol found occupied index 2 and continued probing.
+Rehash event: capacity changed from 7 to 17.
+Collision: erin found occupied index 11 and continued probing.
+Users stored: 5
+Load factor: 0.29
+Find carol: Found
+Remove bob: Removed
+Find bob after removal: Not found
+
+===== Double Hashing =====
+Collision: carol found occupied index 2 and continued probing.
+Rehash event: capacity changed from 7 to 17.
+Collision: erin found occupied index 11 and continued probing.
+Users stored: 5
+Load factor: 0.29
+Find carol: Found
+Remove bob: Removed
+Find bob after removal: Not found
+
+===== CHOSEN METHOD: SEPARATE CHAINING =====
+Separate chaining was selected because collisions are easy to handle and removal is straightforward.
+Collision: carol shares bucket 2.
+Rehash event: capacity changed from 7 to 17.
+Collision: erin shares bucket 11.
+Stored users: alice carol dave erin bob 
+
+===== LOGIN TESTS =====
+Login for alice: successful
+Login for alice: incorrect password
+Login for unknown: unknown user
+
+===== REMOVAL TEST =====
+Remove dave: Removed successfully
+Login for dave: unknown user
+
+Final load factor: 0.24
+
+Security note: demoHash is only for classroom use.
+Real systems should use a slow password-hashing algorithm such as Argon2, bcrypt, or scrypt.
