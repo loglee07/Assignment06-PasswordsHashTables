@@ -1,18 +1,23 @@
 # Assignment 06: Passwords and Hash Tables
 
-This C++17 program demonstrates a small authentication system backed by a custom hash table. It does not use `std::unordered_map` to store users.
+## Summary
 
-## Features
+This C++17 program demonstrates an authentication system using a custom hash table. It tests separate chaining, linear probing, quadratic probing, and double hashing. The program stores five users, verifies passwords, handles collisions, removes users, and automatically resizes and rehashes the table.
 
-- Stores username keys and user records
-- Implements `insert`, `find`, `remove`, and `loadFactor`
-- Automatically resizes and rehashes when the load factor exceeds 0.70
-- Implements separate chaining, linear probing, quadratic probing, and double hashing
-- Stores a salt and a hash of `salt + password + pepper` for each user
-- Demonstrates successful login, incorrect password, unknown user, removal, collisions, and rehashing
+## How to Run
 
-## Compile and Run
+Compile the program:
 
-```bash
-clang++ -std=c++17 main.cpp -o assignment06
-./assignment06
+    clang++ -std=c++17 main.cpp -o assignment06
+
+Run the program:
+
+    ./assignment06
+
+Save the output:
+
+    ./assignment06 > results.txt
+
+## AI Disclosure
+
+I used ChatGPT to help explain hash tables, develop and revise the program, and troubleshoot errors. I reviewed, tested, and verified the final code.
